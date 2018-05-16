@@ -92,6 +92,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textColor="@color/colorButtonText"
+                android:background="@drawable/rounded_button"
                 style="@style/button" />
             <Button
                 android:layout_width="wrap_content"
@@ -103,6 +104,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textColor="@color/colorButtonText"
+                android:background="@drawable/rounded_button"
                 style="@style/button" />
         </LinearLayout>
         <LinearLayout
@@ -182,6 +184,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textColor="@color/colorButtonText"
+                android:background="@drawable/rounded_button"
                 style="@style/button" />
             <Button
                 android:layout_width="wrap_content"
@@ -193,6 +196,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textColor="@color/colorButtonText"
+                android:background="@drawable/rounded_button"
                 style="@style/button" />
         </LinearLayout>
     </LinearLayout>
@@ -205,6 +209,7 @@
         android:layout_above="@id/wc_banner"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorButtonText"
+        android:background="@drawable/rounded_button"
         style="@style/button"/>
     <LinearLayout
         android:layout_width="match_parent"
