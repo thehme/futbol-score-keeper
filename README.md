@@ -11,6 +11,6 @@ This is my second project for the Udacity #GrowWithGoogle scholarship program. I
 
 # Views
 
-![portrait-screenshot](app/src/main/res/drawable/futbol_score_keeper_app_portait.png)
+![portrait-screenshot](app/src/main/res/drawable/futbol_score_keeper_app_portrait.png)
 
 ![landscape-screenshot](app/src/main/res/drawable/futbol_score_keeper_app_landscape.png)
