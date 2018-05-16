@@ -6,28 +6,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.futbolscorekeeper.MainActivity">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
         <ImageView
             android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:src="@drawable/wc_russia_tall_small_banner"
-            android:scaleType="centerCrop"/>
+            android:src="@drawable/fifa_wc_vertical_tall"
+            android:scaleType="centerCrop"
+            android:id="@+id/wc_banner"/>
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/futbol_field_horizontal" />
+            android:src="@drawable/futbol_field_horizontal"
+            android:id="@+id/field_image"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
-            android:layout_width="@dimen/zero_dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="16dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="36sp"
                 android:padding="4dp"
@@ -36,7 +45,6 @@
                 android:inputType="textCapCharacters"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/russo_one_regular"
-                android:layout_marginBottom="12dp"
                 android:cursorVisible="false" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,6 +58,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:gravity="center_horizontal"/>
+
                 <TextView
                     android:layout_width="@dimen/zero_dp"
                     android:layout_weight="0.5"
@@ -72,7 +81,7 @@
                     android:textSize="48sp"
                     android:fontFamily="@font/russo_one_regular"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="8dp"
                     android:id="@+id/team_a_score"/>
                 <TextView
                     android:layout_width="@dimen/zero_dp"
@@ -83,55 +92,52 @@
                     android:textSize="48sp"
                     android:fontFamily="@font/russo_one_regular"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="8dp"
                     android:id="@+id/team_a_fouls"/>
-            </LinearLayout>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/goal_exclamation"
-                android:textStyle="bold"
-                android:layout_margin="8dp"
-                android:onClick="increaseTeamAgoals"
-                android:layout_gravity="center"
-                android:fontFamily="@font/ubuntu_regular"
-                android:textColor="@color/colorButtonText"
-                style="@style/button" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/foul_exclamation"
-                android:textStyle="bold"
-                android:layout_margin="8dp"
-                android:onClick="increaseTeamAfouls"
-                android:layout_gravity="center"
-                android:fontFamily="@font/ubuntu_regular"
-                android:textColor="@color/colorButtonText"
-                style="@style/button" />
+                </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goal_exclamation"
+                    android:textStyle="bold"
+                    android:layout_margin="8dp"
+                    android:onClick="increaseTeamAgoals"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textColor="@color/colorButtonText"
+                    style="@style/button" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/foul_exclamation"
+                    android:textStyle="bold"
+                    android:layout_margin="8dp"
+                    android:onClick="increaseTeamAfouls"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textColor="@color/colorButtonText"
+                    style="@style/button" />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
-            android:layout_width="@dimen/zero_dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="16dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="36sp"
                 android:padding="4dp"
                 android:hint="@string/second_team"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="12dp"
                 android:inputType="textCapCharacters"
                 android:cursorVisible="false"
                 android:fontFamily="@font/russo_one_regular" />
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
                 <TextView
                     android:layout_width="@dimen/zero_dp"
                     android:layout_weight="0.5"
@@ -150,9 +156,9 @@
                     android:gravity="center_horizontal"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
                 <TextView
                     android:layout_width="@dimen/zero_dp"
                     android:layout_weight="0.5"
@@ -162,7 +168,7 @@
                     android:textSize="48sp"
                     android:fontFamily="@font/russo_one_regular"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="8dp"
                     android:id="@+id/team_b_score"/>
                 <TextView
                     android:layout_width="@dimen/zero_dp"
@@ -173,7 +179,7 @@
                     android:textSize="48sp"
                     android:fontFamily="@font/russo_one_regular"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="8dp"
                     android:id="@+id/team_b_fouls"/>
             </LinearLayout>
             <Button
@@ -200,14 +206,24 @@
                 style="@style/button" />
         </LinearLayout>
     </LinearLayout>
-    <Button
-        android:text="@string/reset"
-        android:onClick="resetScore"
-        android:layout_marginBottom="88dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/wc_banner"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/colorButtonText"
-        style="@style/button"/>
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+        <Button
+            android:text="@string/reset"
+            android:onClick="resetScore"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorButtonText"
+            style="@style/button" />
+    </LinearLayout>
 </RelativeLayout>
