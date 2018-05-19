@@ -3,6 +3,7 @@ package com.example.android.futbolscorekeeper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
         foulsTeamB += 1;
         displayFoulsForTeamB(foulsTeamB);
     }
+    public void resetTeamAName() {
+        EditText teamName = (EditText) findViewById(R.id.first_team_name);
+        teamName.setText("");
+    }
+    public void resetTeamBName() {
+        EditText teamName = (EditText) findViewById(R.id.second_team_name);
+        teamName.setText("");
+    }
     public void resetScore(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
@@ -57,5 +66,7 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForTeamB(scoreTeamB);
         displayFoulsForTeamA(foulsTeamA);
         displayFoulsForTeamB(foulsTeamB);
+        resetTeamAName();
+        resetTeamBName();
     }
 }

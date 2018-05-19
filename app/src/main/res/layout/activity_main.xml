@@ -33,7 +33,8 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/russo_one_regular"
                 android:layout_marginBottom="12dp"
-                android:cursorVisible="false" />
+                android:cursorVisible="false"
+                android:id="@+id/first_team_name"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -125,7 +126,8 @@
                 android:layout_marginBottom="12dp"
                 android:inputType="textCapCharacters"
                 android:cursorVisible="false"
-                android:fontFamily="@font/russo_one_regular" />
+                android:fontFamily="@font/russo_one_regular"
+                android:id="@+id/second_team_name" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
